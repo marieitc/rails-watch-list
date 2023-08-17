@@ -1,0 +1,18 @@
+<h1>Lists of movies</h1>
+
+<div></div>
+<div>
+  <ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= link_to list_path(list), style:'text-decoration: none' do%>
+      <% list.name %>
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<div>
+  <%= link_to "New list", new_list_path %>
+</div>
